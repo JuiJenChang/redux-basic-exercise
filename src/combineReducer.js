@@ -3,8 +3,8 @@ import counterReducer from "./reducers/counterReducer";
 import addTodoReducer from "./reducers/addTodoReducer";
 
 const rootReducer = combineReducers({
-  counterReducer,
-  addTodoReducer
+    counterReducer,
+    addTodoReducer
 });
 
 export default rootReducer;

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 const TodoList = () => {
   const [todoItem, setTodoItem] = useState("");
 
-  const todolist = useSelector(state => state.todolist);
+  const todolist = useSelector(state => state.addTodoReducer.todolist);
   const dispatch = useDispatch();
 
   const addTodo = () => {
@@ -12,7 +12,7 @@ const TodoList = () => {
       type: "ADD_TODO",
       payload: { todoItem }
     });
-    setTodoItem('')
+    setTodoItem("");
   };
 
   const removeTodo = e => {
@@ -21,6 +21,7 @@ const TodoList = () => {
       payload: { e }
     });
   };
+  console.log(todolist);
 
   return (
     <div>
